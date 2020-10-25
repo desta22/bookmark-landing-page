@@ -1,134 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Bookmark landing page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Bookmark landing page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/app.css">
 </head>
 <body>
 
-  Features
-  Pricing
-  Contact
-  Login
+<header class="site-header ">
+    <div class="container">
+        <div class="nav-bar">
+            <a class="header-logo-link" href="#about_sec">
+                <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <path class="text"
+                              d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
+                              fill="#242A45" fill-rule="nonzero"/>
+                        <g class="logo">
+                            <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5"/>
+                            <path d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+                                  fill="#FFF"/>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+            <nav class="main-nav">
+                <a class=" main-nav__link" href="#features_sec">Features</a>
+                <a class=" main-nav__link" href="#">Pricing</a>
+                <a class=" main-nav__link" href="#">Contact</a>
+                <a class="main-nav__link btn btn-secondary" href="#">Login</a>
+            </nav>
+            <a class="toggle-nav js__toggle_nav" href="#">
+                <span class="icon-menu"></span>
+            </a>
+        </div>
+    </div>
+    <div class="mob-nav-bar">
+        <div class="mob-nav-bar__top">
+            <a class="header-logo-link" href="#about_sec">
+                <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <path class="text"
+                              d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
+                              fill="#242A45" fill-rule="nonzero"/>
+                        <g class="logo">
+                            <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5"/>
+                            <path d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+                                  fill="#FFF"/>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+            <a class="toggle-nav js__toggle_nav" href="#">
+                <span class="icon-close"></span>
+            </a>
+        </div>
 
-  A Simple Bookmark Manager
+        <nav class="mob-main-nav">
+            <a class=" mob-nav__link" href="#features_sec">Features</a>
+            <a class=" mob-nav__link" href="#">Pricing</a>
+            <a class=" mob-nav__link" href="#">Contact</a>
+            <a class="mob-nav__link-btn btn btn-outline" href="#">Login</a>
+        </nav>
 
-  A clean and simple interface to organize your favourite websites. Open a new 
-  browser tab and see your sites load instantly. Try it for free.
+        <nav class="mob-cos-nav">
+            <a class="mob-soc-nav__link" href="#"><span class="icon-facebook"></span></a>
+            <a class="mob-soc-nav__link" href="#"><span class="icon-twitter"></span></a>
+        </nav>
 
-  Get it on Chrome
-  Get it on Firefox
+    </div>
+</header>
+<section id="about_sec" class="page-sec about-sec  overflow-hidden">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-50 shape-col order-md-2">
+                <img id="hero-image" class="img-on-shape " src="images/illustration-hero.svg" alt="">
+                <div class="rounded-shape right-shape"></div>
+            </div>
+            <div class="col-md-50 order-md-1">
+                <div class="sec__text">
+                    <h1 class="about__title">A Simple Bookmark Manager</h1>
+                    <div class="sec-intro-text light-color-text">
+                        A clean and simple interface to organize your favourite websites. Open a new
+                        browser tab and see your sites load instantly. Try it for free.
+                    </div>
 
-  Features
+                    <div class="sec-action">
+                        <a class="btn btn-primary" href="#">Get it on Chrome</a>
+                        <a class="btn btn-light" href="#">Get it on Firefox</a>
+                    </div>
+                </div>
+            </div>
 
-  Our aim is to make it quick and easy for you to access your favourite websites. 
-  Your bookmarks sync between your devices so you can access them on the go.
+        </div>
+    </div>
+</section>
+<section id="features_sec" class="page-sec features-sec overflow-hidden">
+    <div class="container ">
+        <div class="sec-header text-center">
+            <h2 class="sec-title">Features</h2>
+            <div class="sec-intro-text light-color-text">
+                Our aim is to make it quick and easy for you to access your favourite websites.
+                Your bookmarks sync between your devices so you can access them on the go.
+            </div>
+        </div>
+        <div class="js-tabs">
 
-  Simple Bookmarking
-  Speedy Searching
-  Easy Sharing
+            <div class="tabs">
+                <a href="#simple-panel" id="simple-tab" class="tab active">
+                    <span class="tab-text">Simple Bookmarking</span>
+                </a>
+                <a href="#speedy-panel" id="speedy-tab" class="tab">
+                    <span class="tab-text">Speedy Searching</span>
+                </a>
+                <a href="#easy-panel" id="easy-tab" class="tab">
+                    <span class="tab-text">Easy Sharing</span>
+                </a>
+            </div>
 
-  Bookmark in one click
+            <div class="panels">
+                <div id="simple-panel" class="panel active">
+                    <div class="row no-gutters">
+                        <div class="col-md-50 shape-col">
+                            <img class="img-on-shape" src="images/illustration-features-tab-1.svg" alt="">
+                            <div class="rounded-shape left-shape"></div>
+                        </div>
+                        <div class="col-md-50">
+                            <div class="">
+                                <div class="panel__text">
+                                    <h3 class="sec-title">Bookmark in one click</h3>
+                                    <div class="sec-intro-text light-color-text">
+                                        Organize your bookmarks however you like. Our simple drag-and-drop interface
+                                        gives you complete control over how you manage your favourite sites.
+                                    </div>
+                                    <div class="sec-action d-none d-md-block">
+                                        <a class="btn btn-primary" href="#">More Info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="speedy-panel" class="panel">
+                    <div class="row no-gutters">
+                        <div class="col-md-50 shape-col">
+                            <img class="img-on-shape" src="images/illustration-features-tab-2.svg" alt="">
+                            <div class="rounded-shape left-shape"></div>
+                        </div>
+                        <div class="col-md-50">
+                            <div class="">
+                                <div class="panel__text">
+                                    <h3 class="sec-title">Intelligent searchk</h3>
+                                    <div class="sec-intro-text light-color-text">
+                                        Our powerful search feature will help you find saved sites in no time at all.
+                                        No need to trawl through all of your bookmarks.
+                                    </div>
+                                    <div class="sec-action">
+                                        <a class="btn btn-primary" href="#">More Info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul id="easy-panel" class="panel">
+                    <div class="row no-gutters">
+                        <div class="col-md-50 shape-col">
+                            <img class="img-on-shape" src="images/illustration-features-tab-3.svg" alt="">
+                            <div class="rounded-shape left-shape"></div>
+                        </div>
+                        <div class="col-md-50">
+                            <div class="">
+                                <div class="panel__text">
+                                    <h3 class="sec-title">Share your bookmarks</h3>
+                                    <div class="sec-intro-text light-color-text">
+                                        Easily share your bookmarks and collections with others. Create a shareable
+                                        link that you can send at the click of a button.
+                                    </div>
+                                    <div class="sec-action">
+                                        <a class="btn btn-primary" href="#">More Info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
 
-  Organize your bookmarks however you like. Our simple drag-and-drop interface 
-  gives you complete control over how you manage your favourite sites.
+        </div>
+    </div>
+</section>
+<section id="download_sec" class="page-sec download-sec">
+    <div class="container">
+        <div class="sec-header text-center">
+            <h2 class="sec-title">Download the extension</h2>
+            <div class="sec-intro-text light-color-text">
+                We’ve got more browsers in the pipeline. Please do let us know if you’ve
+                got a favourite you’d like us to prioritize.
+            </div>
+        </div>
+        <div class="browser-box__sec">
+            <div class="browser-box__sec-grid">
 
-  More Info
+                <div class="browser-box">
+                    <div class="browser-box__inner">
 
-  Intelligent search
+                        <div class="browser-box__image">
+                            <img src="images/logo-chrome.svg" alt="">
+                        </div>
+                        <h3 class="browser-box__title">Add to Chrome</h3>
+                        <p class="browser-box__desc">Minimum version 62</p>
+                    </div>
+                    <div class="browser-box__action">
+                        <a class="btn btn-primary btn-block" href="#">Add & Install Extension</a>
+                    </div>
+                </div>
+                <div class="browser-box">
+                    <div class="browser-box__inner">
+                        <div class="browser-box__image">
+                            <img src="images/logo-firefox.svg" alt="">
+                        </div>
+                        <h3 class="browser-box__title">Add to Firefox</h3>
+                        <p class="browser-box__desc">Minimum version 55</p>
+                    </div>
+                    <div class="browser-box__action">
+                        <a class="btn btn-primary btn-block" href="#">Add & Install Extension</a>
+                    </div>
+                </div>
+                <div class="browser-box">
+                    <div class="browser-box__inner">
+                        <div class="browser-box__image">
+                            <img src="images/logo-opera.svg" alt="">
+                        </div>
+                        <h3 class="browser-box__title">Add to Opera</h3>
+                        <p class="browser-box__desc">Minimum version 46</p>
+                    </div>
+                    <div class="browser-box__action">
+                        <a class="btn btn-primary btn-block" href="#">Add & Install Extension</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-sec fqa-sec">
+    <div class="container">
+        <div class="sec-header text-center">
+            <h2 class="sec-title">Frequently Asked Questions</h2>
+            <div class="sec-intro-text light-color-text">
+                Here are some of our FAQs. If you have any other questions you’d like
+                answered please feel free to email us.
+            </div>
+        </div>
+        <div class="accordion-sec">
 
-  Our powerful search feature will help you find saved sites in no time at all. 
-  No need to trawl through all of your bookmarks.
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-trigger">What is Bookmark?</div>
+                    <div class="accordion-collapse">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+                        justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-trigger">How can I request a new browser?</div>
+                    <div class="accordion-collapse">
+                        Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+                        Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+                        ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+                        Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-trigger">Is there a mobile app?</div>
+                    <div class="accordion-collapse">
+                        Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut
+                        condimentum
+                        urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+                        sollicitudin ex et ultricies bibendum.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-trigger">What about other Chromium browsers?</div>
+                    <div class="accordion-collapse">
+                        Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+                        vitae neque eget nisl gravida pellentesque non ut velit.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-action text-center">
+            <a class="btn btn-primary" href="#">More Info</a>
+        </div>
+    </div>
+</section>
+<footer class="site-footer">
+    <div class="container text-center">
+        <div class="site-footer__inner">
 
-  More Info
+            <h4 class="site-footer__subtitle">35,000+ already joined</h4>
+            <h3 class="site-footer__title">Stay up-to-date with what we’re doing</h3>
+            <div class="site-footer__action-sec">
+                <form id="contact_form" class="contact-form" action="" >
+                    <div class="form-control ">
+                        <input class="form-control__input"  type="text" name="email" id="email"
+                               placeholder="Enter your email address">
+                        <div class="error-text"></div>
+                        <!--<div class="error-text">-->
+                        <!--Woops, make sure it\'s an email-->
+                        <!--</div>-->
+                    </div>
+                    <button class="btn btn-secondary" type="submit">Contact Us</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav__sec">
+        <div class="container">
+            <div class="bottom-nav-bar">
+                <nav class="footer-nav">
+                    <a class="bottom-nav__link footer-logo-link" href="#">
+                        <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" fill-rule="evenodd">
+                                <path class="text"
+                                      d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z"
+                                      fill="#242A45" fill-rule="nonzero"/>
+                                <g class="logo">
+                                    <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5"/>
+                                    <path d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
+                                          fill="#FFF"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                    <a class=" bottom-nav__link" href="#">Features</a>
+                    <a class=" bottom-nav__link" href="#">Pricing</a>
+                    <a class=" bottom-nav__link" href="#">Contact</a>
+                </nav>
+                <nav class="footer-soc-nav">
+                    <a class="bottom-nav__link" href="#"><span class="icon-facebook"></span></a>
+                    <a class="bottom-nav__link" href="#"><span class="icon-twitter"></span></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
 
-  Share your bookmarks
 
-  Easily share your bookmarks and collections with others. Create a shareable 
-  link that you can send at the click of a button.
 
-  More Info
 
-  Download the extension
-
-  We’ve got more browsers in the pipeline. Please do let us know if you’ve 
-  got a favourite you’d like us to prioritize.
-
-  Add to Chrome
-  Minimum version 62
-  Add & Install Extension
-
-  Add to Firefox
-  Minimum version 55
-  Add & Install Extension
-
-  Add to Opera
-  Minimum version 46
-  Add & Install Extension
-
-  Frequently Asked Questions
-  
-  Here are some of our FAQs. If you have any other questions you’d like 
-  answered please feel free to email us.
-
-  <!-- Question 1 -->
-  What is Bookmark?
-
-  <!-- Answer 1 -->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
-  justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-
-  <!-- Question 2 -->
-  How can I request a new browser?
-
-  <!-- Answer 2 -->
-  Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
-  Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
-  ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
-  Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-
-  <!-- Question 3 -->
-  Is there a mobile app?
-
-  <!-- Answer 3 -->
-  Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
-  urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
-  sollicitudin ex et ultricies bibendum.
-
-  <!-- Question 4 -->
-  What about other Chromium browsers?
-
-  <!-- Answer 4 -->
-  Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
-  vitae neque eget nisl gravida pellentesque non ut velit.
-
-  More Info
-
-  35,000+ already joined
-
-  Stay up-to-date with what we’re doing
-
-  Contact Us
-
-  Features
-  Pricing
-  Contact
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+<script src="dist/js/app.js"></script>
 </body>
 </html>

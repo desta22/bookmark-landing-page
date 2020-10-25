@@ -1,0 +1,93 @@
+.rounded-shape {
+  background-color: $prime_color;
+  position: absolute;
+  height: 100%;
+  width: 90%;
+
+  @include mq('md') {
+    height: 220px;
+  }
+
+  @include mq('lg') {
+    height: 310px;
+  }
+
+  @include mq('xl') {
+    height: 352px;
+  }
+}
+
+.img-on-shape {
+  position: relative;
+  z-index: 5;
+}
+
+.shape-col {
+  text-align: right;
+
+  @include mq('md') {
+    height: 500px;
+  }
+}
+
+.rounded-shape {
+  &:after {
+    content: '';
+    display: block;
+    background-color: $prime_color;
+    position: absolute;
+    height: 100%;
+    width: 200%;
+  }
+  &.right-shape {
+    border-radius: 300px 0 0 300px;
+    right: -10%;
+    top: 15%;
+    height: 90%;
+
+    &:after {
+      left: 90%;
+    }
+
+    @include mq('md') {
+      right: -130px;
+      height: 220px;
+      top: 135px;
+    }
+
+    @include mq('lg') {
+      height: 310px;
+    }
+
+    @include mq('xl') {
+      height: 352px;
+    }
+  }
+
+  &.left-shape {
+    border-radius: 0 300px 300px 0;
+    left: -20px;
+    top: 35px;
+
+    &:after {
+      right: 90%;
+    }
+
+    @include mq('md') {
+      top: 55px;
+    }
+
+    @include mq('xl') {
+      top: 85px;
+    }
+  }
+}
+
+#hero-image {
+  transform: scale(1.13);
+  @include mq('md') {
+    transform: scale(1);
+    max-width: initial;
+  }
+  //margin-right: -50px;
+}

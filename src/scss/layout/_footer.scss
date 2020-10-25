@@ -1,0 +1,38 @@
+.site-footer {
+  background-color: $prime_color;
+  color: #fff;
+}
+
+.site-footer__subtitle {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 13px;
+  padding-bottom: 15px;
+
+  @include mq('md') {
+    font-size: 14px;
+    padding-bottom: 45px;
+  }
+
+}
+
+.site-footer__title {
+  font-size: 24px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+
+  @include mq('md') {
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+
+}
+
+.site-footer__inner {
+  padding: 70px 30px;
+  margin: 0 auto;
+
+  @include mq('md') {
+    width: 510px;
+  }
+}

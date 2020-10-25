@@ -1,0 +1,25 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin: 0;
+}
+
+.about__title {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  @include mq('md') {
+    line-height: 1.1;
+    font-size: 44px;
+  }
+}
+
+.sec-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  @include mq('md') {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+}

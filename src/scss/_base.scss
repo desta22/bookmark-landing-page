@@ -1,0 +1,55 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  color: $text_color;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 30px;
+  @include mq('xs') {
+    max-width: 540px;
+  }
+  @include mq('md') {
+    padding: 0;
+    max-width: 720px;
+  }
+  @include mq('lg') {
+    max-width: 960px;
+  }
+  @include mq('xl') {
+    max-width: 1110px;
+  }
+}
+
+.row {
+  @include mq('md') {
+    display: flex;
+  }
+}
+
+.col-md-50 {
+  position: relative;
+  width: 100%;
+  @include mq('md') {
+    max-width: 50%;
+  }
+}
+
+@include mq('md') {
+  .order-md-2 {
+    order: 2;
+  }
+  .order-md-1 {
+    order: 1;
+  }
+}

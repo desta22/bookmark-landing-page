@@ -1,0 +1,151 @@
+.site-header {
+  padding: 40px 0;
+
+  @include mq('md') {
+    padding: 50px 0;
+  }
+
+  &.hide {
+    opacity: 0;
+  }
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav {
+  display: none;
+  @include mq('md') {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.main-nav__link {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 25px;
+  display: block;
+  color: $text_color;
+  transition: $transition_main;
+  letter-spacing: 1.5px;
+
+  &:hover,
+  &:focus {
+    color: $second_color;
+  }
+
+  &.btn {
+    letter-spacing: 1.5px;
+    padding: 8px 30px;
+    color: #fff;
+
+    &:hover {
+      color: $second_color;
+    }
+
+    @include mq('md') {
+      margin-left: 25px;
+    }
+  }
+}
+
+.toggle-nav {
+  display: block;
+
+  @include mq('md') {
+    display: none;
+  }
+}
+
+.site-header.open {
+  .nav-bar {
+    opacity: 0;
+  }
+  .mob-nav-bar {
+    left: 0;
+  }
+}
+
+.mob-nav-bar__top {
+  margin: 0 30px;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .toggle-nav {
+    color: #fff;
+  }
+  .header-logo-link {
+    svg {
+      .text {
+        fill: #fff;
+      }
+      .logo {
+
+        circle {
+          fill: #fff;
+        }
+        path {
+          fill: rgba($text_color, .8);
+        }
+      }
+    }
+  }
+}
+
+.mob-nav-bar {
+  transition: $transition_main;
+  position: fixed;
+  top: 0;
+  left: -120%;
+  height: 100vh;
+  width: 100%;
+  z-index: 50;
+  background-color: rgba($text_color, .95);
+  display: block;
+
+  .main-nav {
+    display: block;
+
+  }
+
+}
+
+.mob-main-nav {
+  border-top: 1px solid rgba(#fff, .2);
+  margin: 0 30px;
+}
+
+.mob-nav__link {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  display: block;
+  padding: 20px;
+  border-bottom: 1px solid rgba(#fff, .2);
+
+}
+
+.mob-cos-nav {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+}
+
+.mob-soc-nav__link {
+  font-size: 20px;
+  color: #fff;
+  padding: 20px;
+}
+
+.mob-nav__link-btn {
+  margin-top: 20px;
+  width: 100%;
+}

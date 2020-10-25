@@ -1,0 +1,37 @@
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.position-relative {
+  position: relative;
+
+}
+
+.text-center {
+  text-align: center;
+}
+
+.light-color-text {
+  color: $light_color;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-none {
+  display: none;
+}
+
+@each $bp-key, $bp-value in $breakpoints {
+  .d-#{$bp-key}-block {
+    @include mq(#{$bp-key}, 'min') {
+      display: block;
+    }
+  }
+}
