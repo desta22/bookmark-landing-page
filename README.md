@@ -1,4 +1,8 @@
-test Deploymen
+
+deployed on
+
+https://bookmark-landing-page-k51zrvifk.vercel.app/ 
+
 # Frontend Mentor - Bookmark landing page
 
 ![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)
