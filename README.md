@@ -1,7 +1,14 @@
+## Instalacija i pokretanje 
+1. preuzeti repo
+2. npm install
+3. npm run watch
+4. npm run prod
+5. npm run prod-es5
 
-deployed on
-
+### Postavljeno na
 https://bookmark-landing-page-k51zrvifk.vercel.app/ 
+
+
 
 # Frontend Mentor - Bookmark landing page
 
